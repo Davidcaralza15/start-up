@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--David Carhuapoma-->
+<!--5/19/2021-->
+<html>
+<head>
+	<title>Gym Form</title>
+</head>
+<body>
+<!--Start of the CSS Style-->
+<style>
+body {
+    background-image: url(formback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+.banner {
+    height:330px;
+    background-color:#5F687C;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+</style>
+
+<!--First banner code-->
+<div class="banner">
+<div>
+<center>
+<br/>
+<br/>
+<h2 style="font-size:50px; color:white">DAVID'S GYM FORM</h2>
+<table border="0">
+    <tr>
+<!--Button Link to the Home Page-->
+    <td style="color:white; font-size:22px">
+    <input type="button"  onclick="location.href='index.html'" style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 80px" value="Home"/><br/>
+    </td>
+
+<!--Button Link to the Form Page-->
+    <td style="color:white; font-size:22px">
+    <input type="button"  onclick="location.href='form.html'"  style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 80px" value="Form"/><br/>
+    </td>
+
+<!--Button Link to the Validation Page-->
+    <td style="font-size:22px">
+    <input type="button"  onclick="location.href='validation.html'" style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 110px" value="Validation"/><br/>
+    </td>
+    </tr>
+    </table>
+</div>
+</div>
+
+<!--Start of the form without the validation-->
+<form style="padding-top:80px" name="Myform" onSubmit="return validation();">
+<center>
+<!--First Fieldest code-->
+	<fieldset style="width:800px; padding-top:20px; padding-bottom:20px">
+	<legend style="font-size:30px">Create Your Profile</legend>
+	<label style="font-size:20px">Username: <input type="text" name="username"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Password: <input type="password" name="password"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Check Password: <input type="password" name="checkpassword"></label>
+	</center>
+	</fieldset>
+	<br/>
+	<br/>
+<center>
+<!--Second Fieldest code-->
+	<fieldset style="width:800px; padding-top:20px; padding-bottom:20px">
+	<legend style="font-size:30px">Contact Information</legend>
+	<label style="font-size:20px">First name: <input type="text" name="Firstname"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Last name: <input type="text" name="Lastname"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Gender: <input type="radio" name="gender" value="male">Male</label><label style="font-size:20px">
+	<input type="radio" name="gender" value="Female">Female</label></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Email Adress: <input type="email" name="email"></label>
+	<label style="font-size:20px">Phone Number: <input type="text" name="phone"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Hobbies: <input type="checkbox" name="hobby" >Soccer</label>
+	<label style="font-size:20px"><input type="checkbox" name="hobby" >Voleyball</label>
+	<label style="font-size:20px"><input type="checkbox" name="hobby" >Running</label>
+	<label style="font-size:20px"><input type="checkbox" name="hobby" >External Ports</label>
+	<label style="font-size:20px"><input type="checkbox" name="hobby" >Other</label>	
+	</fieldset>
+	<br/>
+	<br/>
+
+<!--Third Fieldest code-->
+        <fieldset style="width:800px; padding-top:20px; padding-bottom:20px">
+	<legend style="font-size:30px">Contact Information</legend>
+	<label style="font-size:20px">Address: <input type="text" name="Address"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Apartment: <input type="text" name="Apartment"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">State: <input type="text" name="State" ></label>
+	<label style="font-size:20px">Zip Code: <input type="text" name="Zip" ></label>
+	<br/>
+	<br/>
+	</fieldset>
+	<br/>
+	<br/>
+
+<!--Fourth Fieldest code-->
+	<fieldset style="width:800px; padding-top:20px; padding-bottom:20px">
+	<legend style="font-size:30px">Payment Information</legend>
+	<p style="font-size:20px"> Card Type:
+	<select name="cardtype">
+        <option value=" "></option>
+	<option value="visa">Visa</option>
+	<option value="master">Master Card</option>
+	<option value="Paypal">PayPal</option>
+	<option value="OTHER">Other</option>
+	</select>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Card Owner: <input type="text" name="cardowner"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Card Number: <input type="text" name="cardnum"></label>
+        <br/>
+	<br/>
+	<label style="font-size:20px">Expiration Date: <input type="text" name="expdate"></label>
+        <br/>
+	<br/>
+	<label style="font-size:20px">CVV: <input type="password" name="cvv"></label>
+	<br/>
+	<br/>
+	<input style="font-size:20px;" type="submit" value="Submit"/>
+	<input style="font-size:20px" type="reset" value="Reset" onClick="reset()"/>
+	</fieldset>
+</form>
+</body>
+</html>
+

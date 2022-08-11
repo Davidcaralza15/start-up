@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!--David Carhuapoma-->
+<!--5/19/2021-->
+<html>
+<head>
+	<title>Gym Form</title>
+</head>
+
+<!--Start of the validation-->
+<script>
+function reset()
+{
+document.Myform.username.value = "";
+document.Myform.password.value = "";
+document.Myform.checkpassword.value = "";
+document.Myform.Firstname.value = "";
+document.Myform.Lastname.value = "";
+document.Myform.email.value = "";
+document.Myform.phone.value = "";
+document.Myform.Address.value = "";
+document.Myform.Apartment.value = "";
+document.Myform.State.value = "";
+document.Myform.Zip.value = "";
+document.Myform.cardowner.value = "";
+document.Myform.cardnum.value = "";
+document.Myform.expdate.value = "";
+document.Myform.cvv.value = "";
+
+document.Myform.gender[0].checked = false;
+document.Myform.gender[1].checked = false;
+
+document.Myform.hobby[0].checked = false;
+document.Myform.hobby[1].checked = false;
+document.Myform.hobby[2].checked = false;
+document.Myform.hobby[3].checked = false;
+document.Myform.hobby[4].checked = false;
+
+document.Myform.cardtype.selectedIndex = 0;
+}
+
+function validation() 
+{
+
+//Username Validation
+var a = document.Myform.username.value;
+
+if (a == "")
+{
+alert("Please Enter Your Username");
+document.Myform.username.focus();
+return false;
+}
+
+if(!isNaN(a))
+{
+alert("Your Username can't contain only numbers");
+document.Myform.username.focus();
+return false;
+}
+
+if ((a.length<5) || (a.length>15))
+{
+alert("Your Username must be 5 to 15 characters");
+document.Myform.username.focus();
+return false;
+}
+
+
+//Password Validation
+var b = document.Myform.password.value;
+if (b == "")
+{
+alert("Please enter your Password");
+document.Myform.password.focus();
+return false;
+}
+
+if ((b.length < 6) || (b.length > 15))
+{
+alert("Your Password must be 6 to 15 characters");
+document.Myform.password.focus();
+return false;
+}
+
+
+//Check Password Validation
+var c = document.Myform.checkpassword.value;
+if (c == "")
+{
+alert("Please complete the 'Check Password' field.")
+document.Myform.checkpassword.focus();
+return false;
+}
+
+if(c != b)
+{
+alert("Your passwords do not match, try again!.");
+document.Myform.checkpassword.focus();
+return false;
+}
+
+
+//First Name Validation
+var d = document.Myform.Firstname.value;
+
+if (d == "")
+{
+alert("Please enter your First Name");
+document.Myform.Firstname.focus();
+return false;
+}
+
+if(!isNaN(d))
+{
+alert("Your name can only contain letters");
+document.Myform.Firstname.focus();
+return false;
+}
+
+if(d.indexOf(" ") != -1)
+{
+alert("Your First Name can't contain any spaces");
+document.Myform.Firstname.focus();
+return false;
+}
+
+if(d.indexOf(".") != -1)
+{
+alert("Your First Name can't contain any dot");
+document.Myform.Firstname.focus();
+return false;
+}
+
+if(d.indexOf(",") != -1)
+{
+alert("Your First Name can't contain any coma");
+document.Myform.Firstname.focus();
+return false;
+}
+
+
+//Last name Validation
+var e = document.Myform.Lastname.value;
+
+if (e == "")
+{
+alert("Please enter your Last Name");
+document.Myform.Lastname.focus();
+return false;
+}
+
+if(!isNaN(e))
+{
+alert("Your Last Name can only contain letters");
+document.Myform.Lastname.focus();
+return false;
+}
+
+if(e.indexOf(" ") != -1)
+{
+alert("Your Last Name can't contain any spaces");
+document.Myform.Lastname.focus();
+return false;
+}
+
+if(e.indexOf(".") != -1)
+{
+alert("Your Last Name can't contain any dot");
+document.Myform.Lastname.focus();
+return false;
+}
+
+if(e.indexOf(",") != -1)
+{
+alert("Your Last Name can't contain any coma");
+document.Myform.Lastname.focus();
+return false;
+}
+
+//Gender Validation
+if ( ( document.Myform.gender[0].checked == false ) && ( document.Myform.gender[1].checked == false ) )
+{
+alert ("Please choose your gender: Male or Female");
+document.Myform.gender[0].focus();		
+return false;
+}
+
+
+//Email Address Validation
+var f = document.Myform.email.value;
+
+if (f == "")
+{
+alert("Please enter you Email");
+document.Myform.email.focus();		
+return false;
+}
+
+if (f.indexOf("@",0) == -1) 
+{
+alert("Your Email must contain the following characters: '@' and '.' for it to be valid.");
+document.Myform.email.focus();		
+return false;
+}
+
+if (f.indexOf(".",0) == -1) 
+{
+alert("Your Email must contain the following characters: '@' and '.' for it to be valid.");
+document.Myform.email.focus();		
+return false;
+}
+
+
+//Phone Number Validation
+var g = document.Myform.phone.value;
+
+if (g == "") 
+{
+alert("Please enter you Phone Number");
+document.Myform.phone.focus();		
+return false;
+}
+
+if(isNaN(g))
+{
+alert("Enter the valid Phone Number(Like : '044-420-4669')");
+document.Myform.phone.focus();
+return false;
+}
+
+if(g.length != 10)
+{
+alert("Your phone number has to be 10 digists");
+document.Myform.phone.focus();
+return false;
+}
+
+
+//Checkbox Validation
+if (( document.Myform.hobby[0].checked == false) && ( document.Myform.hobby[1].checked == false) && ( Myform.hobby[2].checked == false) && ( Myform.hobby[3].checked == false) && ( Myform.hobby[4].checked == false))
+{
+alert("Please select at least one hobby");
+document.Myform.hobby[0].focus();
+return false;
+}
+
+//Address Validation
+var h = document.Myform.Address.value;
+
+if (h == "")
+{
+alert("Please enter your Address")
+document.Myform.Address.focus();
+return false;
+}
+
+//Apartment Validation
+var i = document.Myform.Apartment.value;
+
+if (i == "")
+{
+alert("Please enter your apartment");
+document.Myform.Apartment.focus();
+return false;
+}
+
+//State Validation
+var j = document.Myform.State.value;
+
+if(j == "")
+{
+alert("Please enter your State");
+document.Myform.State.focus();
+return false;
+}
+
+if(j.length != 2)
+{
+alert("Please provide state abbreviation (2 digits)");
+document.Myform.State.focus();
+return false;
+}
+
+if(!isNaN(j))
+{
+alert("This field can not contain numbers, please enter only 2 caracthers");
+document.Myform.State.focus();
+return false;
+}
+
+//Zip Code Validation
+
+var k = document.Myform.Zip.value;
+
+if (k == "")
+{
+alert("Please provide your zip code");
+document.Myform.Zip.focus();
+return false;
+}
+
+if(isNaN(k))
+{
+alert("Your Zip code must contain only 5 digists");
+document.Myform.Zip.focus();
+return false;
+}
+
+if(k.length != 5)
+{
+alert("Your Zip code must contain only 5 digists");
+document.Myform.Zip.focus();
+return false;
+}
+
+if ( document.Myform.cardtype.selectedIndex == 0 )
+	{
+		alert ("Please select your payment method");
+		document.Myform.cardtype.focus();
+		return false;
+	}
+
+//Card Owner Validation
+
+var l = document.Myform.cardowner.value;
+
+if( l == "" )
+{
+alert("Please provide the Name of the card holder");
+document.Myform.cardowner.focus();
+return false;
+}
+
+if (l.indexOf(" ",0) == -1) 
+{
+alert("Please provide a valid Card Name Holder");
+document.Myform.cardowner.focus();		
+return false;
+}
+
+
+//Card Number Validation
+var m = document.Myform.cardnum.value;
+
+if ( m == "" )
+{
+alert("Please provide your card number");
+document.Myform.cardnum.focus();		
+return false;
+}
+
+if (m.length != 16)
+{
+alert("Your card number must contain 16 digists");
+document.Myform.cardnum.focus();		
+return false;
+}
+
+if(isNaN(m))
+{
+alert("Enter a valid card number");
+document.Myform.cardnum.focus();
+return false;
+}
+
+
+
+
+//Expiration Date validation
+
+var n = document.Myform.expdate.value;
+
+if ( n == "" )
+{
+alert("Pleave provide the expiration date");
+document.Myform.expdate.focus();		
+return false;
+}
+
+if (n.length != 5)
+{
+alert("Please provide a valid expiration date. Example: '07/23'");
+document.Myform.expdate.focus();		
+return false;
+}
+
+if (n.indexOf("/",0) == -1) 
+{
+alert("Please provide a valid expiration date. Example: '07/23'");
+document.Myform.expdate.focus();		
+return false;
+}
+
+//CVV Validation
+
+var o = document.Myform.cvv.value;
+
+if( o == "" )
+{
+alert("Please provide your CVV");
+document.Myform.cvv.focus();		
+return false;
+}
+
+if(o.length != 3)
+{
+alert("Please provide a valid CVV. Example: '345' ");
+document.Myform.cvv.focus();		
+return false;
+}
+
+if(isNaN(o))
+{
+alert("Please provide a valid CVV, only numbers");
+document.Myform.cvv.focus();
+return false;
+}
+
+alert("Well Done!! Your form has been submitted")
+
+return true;
+}
+
+</script>
+
+<body>
+<style>
+body {
+    background-image: url(formback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+.banner {
+    height:350px;
+    background-color:#5F687C;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+</style>
+
+<div class="banner">
+<div>
+<center>
+<br/>
+
+<h2 style="font-size:50px; color:white">DAVID'S GYM FORM</h2>
+<i><p style="font-size:50px; color:white">VALIDATION</p></i>
+<table border="0">
+    <tr>
+    <td style="color:white; font-size:22px">
+    <input type="button"  onclick="location.href='index.html'" style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 80px" value="Home"/><br/>
+    </td>
+
+    <td style="color:white; font-size:22px">
+    <input type="button"  onclick="location.href='form.html'"  style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 80px" value="Form"/><br/>
+    </td>
+
+    <td style="font-size:22px">
+    <input type="button"  onclick="location.href='validation.html'" style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 110px" value="Validation"/><br/>
+    </td>
+    </tr>
+    </table>
+</div>
+</div>
+
+<form style="padding-top:80px" name="Myform" onSubmit="return validation();">
+<center>
+<!--First Fieldest code-->
+	<fieldset style="width:800px; padding-top:20px; padding-bottom:20px">
+	<legend style="font-size:30px">Create Your Profile</legend>
+	<label style="font-size:20px">Username: <input type="text" name="username"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Password: <input type="password" name="password"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Check Password: <input type="password" name="checkpassword"></label>
+	</center>
+	</fieldset>
+	<br/>
+	<br/>
+<center>
+<!--Second Fieldest code-->
+	<fieldset style="width:800px; padding-top:20px; padding-bottom:20px">
+	<legend style="font-size:30px">Contact Information</legend>
+	<label style="font-size:20px">First name: <input type="text" name="Firstname"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Last name: <input type="text" name="Lastname"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Gender: <input type="radio" name="gender" value="male">Male</label><label style="font-size:20px">
+	<input type="radio" name="gender" value="Female">Female</label></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Email Adress: <input type="email" name="email"></label>
+	<label style="font-size:20px">Phone Number: <input type="text" name="phone"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Hobbies: <input type="checkbox" name="hobby" >Soccer</label>
+	<label style="font-size:20px"><input type="checkbox" name="hobby" >Voleyball</label>
+	<label style="font-size:20px"><input type="checkbox" name="hobby" >Running</label>
+	<label style="font-size:20px"><input type="checkbox" name="hobby" >External Ports</label>
+	<label style="font-size:20px"><input type="checkbox" name="hobby" >Other</label>	
+	</fieldset>
+	<br/>
+	<br/>
+<!--Third Fieldest code-->
+        <fieldset style="width:800px; padding-top:20px; padding-bottom:20px">
+	<legend style="font-size:30px">Contact Information</legend>
+	<label style="font-size:20px">Address: <input type="text" name="Address"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Apartment: <input type="text" name="Apartment"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">State: <input type="text" name="State" ></label>
+	<label style="font-size:20px">Zip Code: <input type="text" name="Zip" ></label>
+	<br/>
+	<br/>
+	</fieldset>
+	<br/>
+	<br/>
+
+<!--Fourth Fieldest code-->
+	<fieldset style="width:800px; padding-top:20px; padding-bottom:20px">
+	<legend style="font-size:30px">Payment Information</legend>
+	<p style="font-size:20px"> Card Type:
+	<select name="cardtype">
+        <option value=" "></option>
+	<option value="visa">Visa</option>
+	<option value="master">Master Card</option>
+	<option value="Paypal">PayPal</option>
+	<option value="OTHER">Other</option>
+	</select>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Card Owner: <input type="text" name="cardowner"></label>
+	<br/>
+	<br/>
+	<label style="font-size:20px">Card Number: <input type="text" name="cardnum"></label>
+        <br/>
+	<br/>
+	<label style="font-size:20px">Expiration Date: <input type="text" name="expdate"></label>
+        <br/>
+	<br/>
+	<label style="font-size:20px">CVV: <input type="password" name="cvv"></label>
+	<br/>
+	<br/>
+	<input style="font-size:20px;" type="submit" value="Submit"/>
+	<input style="font-size:20px" type="reset" value="Reset" onClick="reset()"/>
+	</fieldset>
+
+
+	
+
+</form>
+</body>
+</html>

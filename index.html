@@ -1,34 +1,419 @@
-
 <!DOCTYPE html>
+<!--David Carhuapoma-->
+<!--5/5/2021-->
 <html>
-  <head>
-    <title>Startup</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<head>
+	<title>David's Gym</title>
+</head>
+<body>
+<a id="top"></a>
 
-    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
+<!--Start of the CSS Style-->
+<style>
+body {
+    background-color: #FFFFFF;
+ }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    
-    <!-- Your own stylesheet -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <div class="container d-flex align-items-center h-100">
-      <div class="row">
-        <header class="text-center col-12">
-        <h1 class="text-uppercase"><strong>THE BIGGEST STARTUP EVEN OF THE YEAR</h1>
-        </header>
-        <div class="buffer col-12"></div>
-        <section class="text-center col-12">
-        <hr>
-          <a href="https://mailchi.mp/03022c1a3a1c/class"> <button class="btn btn-primary btn-xl">Find out more</button></a>
-            </strong>
-            </section>
-      </div>
-    </div>
-  </body>
+.banner {
+    background-image: url(banner1.jpg);
+    height: 500px;
+    width: 100%;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative
+    border-radius: 12px;
+  }
+
+.imageone {
+   background-color: #8C1616;
+   height: 500px;
+   text-align: right;
+  }
+
+.imagetwo {
+    background-image: url(imagetwo.jpg);
+    height: 750px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+    background-position: fixed;
+}
+
+.imagethree {
+    background-image: url(imagethree.jpg);
+    height: 670px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+    background-position: fixed;
+}
+
+.imagefour {
+    background-image: url(covid.jpg);
+    height: 670px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+    background-position: fixed;
+    margin-top: 150px;
+
+}
+
+.hours {
+    background-image: url(hours.jpg);
+    height: 670px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+    background-position: fixed;
+
+}
+.squareone {
+   background-color: #8C1616;
+   height: 380px;
+   width: 490px;
+   float: left;
+   margin-left: 80px;
+   margin-top: 20px;
+}
+
+.squaretwo {
+   background-color: #8C1616;
+   height: 380px;
+   width: 490px;
+   float: right;
+   margin-right: 80px;
+   margin-top: 20px;
+}
+
+.squarethree {
+   background-color: #8C1616;
+   height: 380px;
+   width: 500px;
+   margin-top: 490px;
+   margin-left: 370px;
+}
+
+.banner2 {
+   background-color:#5B6681;
+   height: 310px;
+   background-size: cover;
+   margin-top:120px;
+}
+
+.hours1 {
+    padding-left:100px;
+}
+
+.email {
+    padding-left:50px;	
+
+}
+
+.inside {
+    padding-top:50px;
+}
+
+<!--End of teh CSS Style-->
+
+</style>
+
+
+<!--First Banner-->
+<div class="banner">
+  <div>
+    <br/>
+    <p style= "font-family:Verdana, sans-serif; color:white; font-size:80px; padding-left: 100px">DAVID'S GYM</p>
+
+    <table border="0" style= "padding-left: 240px">
+    <tr>
+<!--Button Link to the Home Page-->
+    <td style="color:white; font-size:22px">
+    <input type="button"  onclick="location.href='index.html'" style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 80px" value="Home"/><br/>
+    </td>
+
+<!--Button Link to the Form Page-->
+    <td style="color:white; font-size:22px">
+    <input type="button"  onclick="location.href='form.html'"  style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 80px" value="Form"/><br/>
+    </td>
+
+<!--Button Link to the Validation Page-->
+    <td style="font-size:22px">
+    <input type="button"  onclick="location.href='validation.html'" style="background-color:#A88B1E; color:white; font-size: 20px; height: 40px; width: 110px" value="Validation"/><br/>
+    </td>
+    </tr>
+    </table>
+    <i><p style="color:white; font-size:20px; padding-left: 100px">‘The only place where success comes before work is in the dictionary.’</p></i>
+  </div>  
+</div>
+
+
+<!--First Phrase-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<center>
+<p style="font-size:30px; padding-left: 50px; padding-right: 50px">WE’RE WEARING MASKS AND TAKING TEMPERATURES TO MAKE YOU FEEL SAFE AT DAVID'S GYM</p>
+<form>
+<input type="button"  onclick="location.href='validation.html'" style="background-color:#8C1616; color:white; font-size: 20px; height: 60px; width: 140px" value="Join Us"/>
+</form>
+</center>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!--Start of the code for the movement of the images-->
+     <div class= "imageone">
+     <a id="what"></a>
+     <div>
+
+<!--Script Start-->
+	
+	<script>
+	var imgArray = new Array(3);
+	var index = 0;
+function cycle()
+	{
+	document.banner.src = imgArray[index].src;
+	index++;	
+ 	if (index > 2)
+ 	{
+	index=0;
+ 	}
+ 	setTimeout("cycle()",2000);
+ 	return;
+}
+
+function startup()
+	{
+	imgArray[0] = new Image;
+	imgArray[0].src = "gym.gif";
+	imgArray[1] = new Image;
+ 	imgArray[1].src = "gym1.gif";
+ 	imgArray[2] = new Image;
+ 	imgArray[2].src = "gym2.gif";
+ 	cycle();
+ 	return;
+	}
+	</script>
+	<body onLoad="startup()">
+ 	<div align="left">
+ 	<img style="width:600px; height:400px; padding-right:30px; padding-left:30px; padding-top:60px; float:left" name="banner" src="gym.gif">
+	<p style="padding-top:80px; color:white; font-size:50px">WHAT MAKE US DIFFERENT?!</p>
+	<p style="color:white; font-size:25px">We provide an ecosystem of fitness opportunities that are catered to your needs and goals!</p>
+	<br/>
+ 	</div>
+	</div>
+	</div>
+
+<!--Second Phrase-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<center>
+<p style="font-size:50px">"Action is the foundational key to all success."</p>
+<i><p style="font-size:25px">Pablo Picasso</p></i>
+</center>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<!--Start for the second banner-->
+<div class= "imagetwo">
+ <div>
+	<center>
+	<h2 style="padding-top:200px; padding-left:50px; font-size:55px; color:#314164">TRAINING  MADE  PERSONAL</h2>
+	<br/>
+	<p style="padding-left:300px; padding-right:300px; font-size:36px">Our personal trainers are here to help you reach your fitness goals. Get a fitness assessment and session to learn if a personal trainer is right for you.</p>
+	</center>
+ </div>
+</div>	
+
+<!--Third Phrase-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<center>
+<p style="font-size:35px">"If something stands between you and your success, move it. Never be denied."</p>
+<i><p style="font-size:25px"> Dwayne ‘The Rock’ Johnson</p></i>
+</center>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!--Start for the thirs banner-->
+<div class="imagethree">
+<a id="weight"></a>
+<div>
+	<center>
+	<h2 style="padding-top:160px; padding-left:50px; font-size:55px; color:#314164">WEIGHT TRAINING</h2>
+	<br/>
+	<p style="padding-left:300px; padding-right:300px; font-size:30px">At DAVID'S GYM we are proud to have some of the latest equipment, combined with the ultimate enviroment for exercise. Try it NOW, 
+and we assure you that you will not regret</p>
+	</center>
+</div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<!--Inside pictures of the gym-->
+<center>
+<h2 style="font-size:40px">INSIDE PHOTOS</h2>
+</center>
+
+<div class="squareone">
+<img src="inside.jpg" alt="gym image" width="460px" height="350px" style="padding-top:15px; padding-left:15px"> <!--All pictures are from FREEPIK(No copyright pictures)-->
+</div>
+
+<div class="squaretwo">
+<img src="inside1.jpg" alt="gym image" width="460px" height="350px" style="padding-top:15px; padding-left:15px"> <!--All pictures are from FREEPIK(No copyright pictures)-->
+</div>
+
+<div class="squarethree">
+<img src="inside2.jpg" alt="gym image" width="470px" height="350px" style="padding-top:15px; padding-left:15px"> <!--All pictures are from FREEPIK(No copyright pictures)-->
+</div>
+
+
+<!--Start of the fourth banner-->
+<div class= "imagefour">
+<a id="covid"></a>
+ <div>
+	
+	<h2 style="padding-top:120px; padding-left:40px; font-size:70px; color:white">COVID  RESTRICTIONS</h2>
+	<br/>
+	<p style="padding-left:50px; padding-right:540px; font-size:32px">At David gym we offer the latest care to combat COVID 19. The health of our clients is very important to us and we show it with the new personal cleaning devices</p>
+	
+	<div class="email">
+	<table style="height:60px; width:130px; text-align:center; background-color:#DCC87E" border="1">
+	<th>
+	<a style="color:white; font-size:20px" href="mailto:Davidgym@Mail.com">E-Mail Us</a>
+	</th>
+	</table>
+	</div>
+ </div>
+</div>	
+
+<!--Fourth Phrase-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<center>
+<p style="font-size:35px">"Success is walking from failure to failure with no loss of enthusiasm."</p>
+<i><p style="font-size:25px"> Winston Churchill</p></i>
+</center>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!--Start of the schedule banner-->
+<div class="hours">
+<h2 style="font-size:60px; padding-top:80px; padding-left:225px">HOURS</h2>
+<div class="hours1">
+
+<table style="text-align:center; height:400px; width:500px" border="1">
+<tr>
+<th style="background-color:#A88B1E; font-size:25px">Days</th>
+<th style="background-color:#A88B1E; font-size:25px">Hours</th>
+</tr>
+
+<tr>
+<td style="background-color:#DCC87E; font-size:18px">Monday</td>
+<td style="background-color:#DCC87E; font-size:18px">6:00 am - 11:00 pm</td>
+</tr>
+
+<tr>
+<td style="background-color:#DCC87E; font-size:18px">Tuesday</td>
+<td style="background-color:#DCC87E; font-size:18px">6:00 am - 11:00 pm</td>
+</tr>
+
+<tr>
+<td style="background-color:#DCC87E; font-size:18px">Wednesday</td>
+<td style="background-color:#DCC87E; font-size:18px">6:00 am - 11:00 pm</td>
+</tr>
+
+<tr>
+<td style="background-color:#DCC87E; font-size:18px">Thursday</td>
+<td style="background-color:#DCC87E; font-size:18px">6:00 am - 11:00 pm</td>
+</tr>
+
+<tr>
+<td style="background-color:#DCC87E; font-size:18px">Friday</td>
+<td style="background-color:#DCC87E; font-size:18px">5:00 am - 12:00 am</td>
+</tr>
+
+<tr>
+<td style="background-color:#DCC87E; font-size:18px">Saturday</td>
+<td style="background-color:#DCC87E; font-size:18px">5:00 am - 12:00 am</td>
+</tr>
+
+<tr>
+<td style="background-color:#DCC87E; font-size:18px">Friday</td>
+<td style="background-color:#DCC87E; font-size:18px">5:00 am - 12:00 am</td>
+</tr>
+</table>
+</div>
+</div>
+
+<center>
+<h2 style="padding-top:90px; font-size:40px">GET YOUR MEMBERSHIP NOW!</h2>
+<p style="font-size:25px">Check out our affordable gym memberships. Clean and spacious with tons of equipment! Join now!<p>
+<input type="button"  onclick="location.href='validation.html'" style="background-color:#8C1616; color:white; font-size: 20px; height: 60px; width: 140px" value="Join Us"/>
+</center>
+
+<!--The last banner with inside links-->
+<div class="banner2">
+<div class="inside">
+<center>
+<h2 style="font-size:50px; color:white">DAVID'S GYM<h2>
+
+<table style="width:600px; text-align:center" border="1">
+<tr>
+<td>
+<a href="#what">What make us different?</a>
+</td>
+
+<td>
+<a href="#weight">Weight Information</a>
+</td>
+
+<td>
+<a href="#covid">Covid</a>
+</td>
+</table>
+</div>
+</center>
+<center>
+<a style="font-size:30px" href="#top">Jump to top of page</a>
+</center>
+</div>
+
+</body>
 </html>
+
+
+
